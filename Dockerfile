@@ -1,11 +1,9 @@
-FROM nginx:alpine as base
+FROM nginx:alpine
 
 WORKDIR /usr/share/nginx/html
 
 COPY index.html ./
 
 EXPOSE 80
-
-USER nginx
 
 CMD ["nginx", "-g", "daemon off;"]
